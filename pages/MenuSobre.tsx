@@ -21,7 +21,7 @@ export default function MenuSobre() {
       (selectedIndex: number | undefined) => {
         switch (selectedIndex) {
           case 0: // Logout(Destrutivo)
-            router.push("/");
+            router.dismissAll();
             break;
 
           default:

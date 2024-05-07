@@ -5,7 +5,7 @@ import { Stack, router } from "expo-router";
 
 export default function App() {
   const onSubmit = (username: string, password: string) => {
-    console.log("Login for: ", username, password)
+   if(username == "teste" && password == "123")
 
     router.push("/home");
   };
@@ -18,8 +18,7 @@ export default function App() {
         }}
       />
       <ImageBackground
-        source={require('../assets/logo.jpg')} // Insira o caminho da sua imagem de fundo aqui
-        style={{ flex: 1 }}
+        source={require('../assets/logo.jpg')}
       >
         <ScrollView>
           <MyForm title="VintageWheels" onSubmit={onSubmit} />
