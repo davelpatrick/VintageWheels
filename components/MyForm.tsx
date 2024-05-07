@@ -14,7 +14,7 @@ interface MyFormProps {
 
 export default function MyForm({ onSubmit, title }: MyFormProps) {
   const [username, setUsername] = useState("teste");
-  const [password, setPassword] = useState("1234");
+  const [password, setPassword] = useState("123");
 
   const cannotSubmit = username.length === 0 || password.length === 0;
 
