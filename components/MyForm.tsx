@@ -25,7 +25,7 @@ export default function MyForm({ onSubmit, title }: MyFormProps) {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.logo}>{title}</Text>
+      <Text testID="Component_title" style={styles.logo}>{title}</Text>
 
       <TextInput
         placeholder="username"
@@ -47,7 +47,7 @@ export default function MyForm({ onSubmit, title }: MyFormProps) {
         onPress={handlePress}
         disabled={cannotSubmit}
       >
-        <Text style={styles.buttonText}>Login</Text>
+        <Text testID="LoginButtonTest"style={styles.buttonText}>Login</Text>
       </TouchableOpacity>
     </View>
   );

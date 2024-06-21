@@ -49,7 +49,7 @@ const CarSectionList = ({ title }: MyHomeList) => {
     <SafeAreaView style={styles.container}>
       <Stack.Screen
         options={{
-          headerTitle: (props) => <menu {...props} />,
+          headerTitle: (props) => <Menu />,
           headerRight: () => <Menu />,
         }}
       />
@@ -70,14 +70,13 @@ const styles = StyleSheet.create({
   },
   sectionHeader: {
     backgroundColor: "#a6051a",
-    paddingVertical: 40,
     justifyContent: "center",
     alignItems: "center",
     height: 50,
     marginBottom: 10,
   },
   sectionHeaderText: {
-    fontSize: 50,
+    fontSize: 30,
     color: "#111111",
     // fontFamily: "fantasy",
   },

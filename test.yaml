@@ -1,0 +1,11 @@
+appId: host.exp.exponent
+---
+- launchApp
+- tapOn: "pdm-ts-lesson10-components"
+- tapOn: "Login"
+- tapOn: "Menu"
+- tapOn: "Sobre"
+- tapOn: "Menu"
+- tapOn: "Cancel"
+- tapOn: "Menu"
+- tapOn: "Logout(Destrutivo)"
