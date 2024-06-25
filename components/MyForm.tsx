@@ -18,9 +18,14 @@ export default function MyForm({ onSubmit, title }: MyFormProps) {
 
   const cannotSubmit = username.length === 0 || password.length === 0;
 
+  const handleUsernameChange = (text: string) => {
+    if (!/\d/.test(text)) {
+      setUsername(text);
+    }
+  };
+
   const handlePress = () => {
     onSubmit(username, password);
-    
   };
 
   return (
@@ -31,7 +36,7 @@ export default function MyForm({ onSubmit, title }: MyFormProps) {
         placeholder="username"
         style={styles.input}
         value={username}
-        onChangeText={setUsername}
+        onChangeText={handleUsernameChange}
       />
 
       <TextInput
@@ -47,7 +52,7 @@ export default function MyForm({ onSubmit, title }: MyFormProps) {
         onPress={handlePress}
         disabled={cannotSubmit}
       >
-        <Text testID="LoginButtonTest"style={styles.buttonText}>Login</Text>
+        <Text testID="LoginButtonTest" style={styles.buttonText}>Login</Text>
       </TouchableOpacity>
     </View>
   );
@@ -62,7 +67,6 @@ const styles = StyleSheet.create({
   logo: {
     textAlign: "center",
     fontSize: 30,
-    // fontFamily: 'Cinzel'
   },
   input: {
     backgroundColor: "white",
@@ -76,11 +80,9 @@ const styles = StyleSheet.create({
     height: 48,
     justifyContent: "center",
     alignItems: "center",
-    // fontFamily: 'Cinzel',
   },
   buttonText: {
     fontSize: 16,
     color: "#111111",
-    // fontFamily: "Cinzel",
   },
 });
